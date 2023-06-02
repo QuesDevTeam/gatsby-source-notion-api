@@ -24,7 +24,7 @@ exports.sourceNodes = async (
 					...acc,
 					[key]: properties[key].value.remoteImage || properties[key].value,
 				}),
-				{ title },
+				{ title, originalType: notionNodeType },
 			)
 
 			markdown = "---\n".concat(YAML.stringify(frontmatter)).concat("\n---\n\n").concat(markdown)
@@ -43,7 +43,6 @@ exports.sourceNodes = async (
 			parent: null,
 			children: [],
 			internal: {
-				originalType: notionNodeType,
 				type: notionNodeType,
 				mediaType: "text/markdown",
 				content: markdown,
