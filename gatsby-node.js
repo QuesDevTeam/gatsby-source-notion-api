@@ -43,6 +43,7 @@ exports.sourceNodes = async (
 			parent: null,
 			children: [],
 			internal: {
+				from: notionNodeType,
 				type: notionNodeType,
 				mediaType: "text/markdown",
 				content: markdown,
